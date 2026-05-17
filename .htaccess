@@ -1,0 +1,9 @@
+Options -Indexes
+RewriteEngine On
+
+# No reescribir si el archivo/directorio existe físicamente (assets, uploads)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Todo lo demás va al front controller
+RewriteRule ^(.*)$ index.php [QSA,L]

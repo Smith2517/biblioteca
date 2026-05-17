@@ -1,0 +1,325 @@
+Quiero que generes un sistema web completo de Biblioteca Virtual usando arquitectura MVC profesional con PHP orientado a objetos, MySQL, HTML5, CSS3, Bootstrap 5 y JavaScript.
+
+El sistema NO será de préstamos físicos. Será exclusivamente una plataforma de consulta y lectura de libros virtuales (PDFs).
+
+# OBJETIVO
+
+Crear una biblioteca virtual académica moderna donde:
+
+- Administradores gestionen usuarios y libros
+- Docentes y estudiantes consulten libros digitales
+- Los libros puedan visualizarse online
+- Existan roles y permisos
+- El sistema tenga dashboards separados según el rol
+
+# TECNOLOGÍAS
+
+Backend:
+- PHP POO
+- MVC
+- MySQL
+- PDO para conexión segura
+
+Frontend:
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- AJAX
+- DataTables
+- SweetAlert2
+- Chart.js
+
+Librerías:
+- PDF.js para visualizar PDFs
+- PHPMailer para recuperación de contraseña
+
+# ESTRUCTURA MVC
+
+Genera la siguiente estructura profesional:
+
+/app
+    /controllers
+    /models
+    /views
+        /admin
+        /teacher
+        /student
+        /auth
+        /layouts
+
+/public
+    /css
+    /js
+    /img
+    /uploads
+        /books
+        /covers
+
+/config
+/core
+/routes
+
+index.php
+
+# SISTEMA DE ROLES
+
+El sistema debe manejar 3 roles:
+
+1. Administrador
+2. Docente
+3. Estudiante
+
+El login debe redireccionar automáticamente según el rol.
+
+# SISTEMA DE AUTENTICACIÓN
+
+Crear:
+
+- Login
+- Logout
+- Middleware de autenticación
+- Middleware de roles
+- Recuperación de contraseña
+- Verificación de sesiones
+- Protección de rutas
+
+Usar:
+- password_hash()
+- password_verify()
+- Sessions PHP
+
+# BASE DE DATOS
+
+Generar migraciones SQL o scripts SQL para las siguientes tablas:
+
+tb_roles
+tb_users
+tb_categories
+tb_authors
+tb_editorials
+tb_books
+tb_favorites
+tb_history
+tb_comments
+
+# TABLA USUARIOS
+
+Campos:
+
+- id_user
+- names
+- surnames
+- email
+- password
+- role_id
+- photo
+- status
+- created_at
+
+# TABLA LIBROS
+
+Campos:
+
+- id_book
+- title
+- isbn
+- description
+- pdf_file
+- cover_image
+- pages
+- year
+- author_id
+- category_id
+- editorial_id
+- views
+- downloads
+- status
+- created_at
+
+# FUNCIONALIDADES ADMIN
+
+Crear dashboard administrador con:
+
+- Total de libros
+- Total de usuarios
+- Libros más vistos
+- Libros más descargados
+- Gráficos estadísticos
+
+Módulos CRUD:
+
+- Usuarios
+- Libros
+- Categorías
+- Autores
+- Editoriales
+
+Funcionalidades:
+
+- Subida de PDFs
+- Subida de portadas
+- Editar libros
+- Eliminar libros
+- Activar/Inactivar usuarios
+- Cambiar roles
+- Estadísticas
+- Reportes
+
+# FUNCIONALIDADES DOCENTE
+
+Dashboard docente con:
+
+- Libros recientes
+- Favoritos
+- Historial
+- Recomendaciones
+
+Funcionalidades:
+
+- Buscar libros
+- Leer PDFs online
+- Descargar PDFs
+- Agregar favoritos
+- Ver historial
+- Comentar libros
+
+# FUNCIONALIDADES ESTUDIANTE
+
+Dashboard estudiante con:
+
+- Libros recientes
+- Categorías populares
+- Favoritos
+- Historial
+
+Funcionalidades:
+
+- Buscar libros
+- Leer online
+- Descargar PDFs
+- Favoritos
+- Comentarios
+
+# INTERFAZ
+
+Quiero una interfaz moderna tipo:
+
+- Netflix
+- Google Books
+- Kindle
+
+Características:
+
+- Tarjetas con portadas
+- Sidebar moderno
+- Navbar responsive
+- Modo oscuro opcional
+- Diseño responsive
+- Animaciones suaves
+- Dashboard moderno
+
+# DASHBOARD ADMIN
+
+Sidebar:
+
+- Dashboard
+- Usuarios
+- Libros
+- Categorías
+- Autores
+- Editoriales
+- Reportes
+- Configuración
+
+# VISTAS NECESARIAS
+
+/auth
+- login.php
+- forgot-password.php
+- reset-password.php
+
+/admin
+- dashboard.php
+- users.php
+- books.php
+- categories.php
+- authors.php
+- editorials.php
+- reports.php
+
+/student
+- dashboard.php
+- catalog.php
+- favorites.php
+- history.php
+- profile.php
+- read-book.php
+
+/teacher
+- dashboard.php
+- catalog.php
+- favorites.php
+- history.php
+- profile.php
+- read-book.php
+
+# FUNCIONALIDADES IMPORTANTES
+
+Implementar:
+
+- Buscador en tiempo real
+- Filtros por categoría
+- Filtros por autor
+- Visualización PDF con PDF.js
+- Sistema de favoritos
+- Historial de lectura
+- Registro de vistas
+- Registro de descargas
+- Comentarios
+- Validaciones frontend y backend
+
+# SEGURIDAD
+
+Implementar:
+
+- Protección CSRF
+- Sanitización de inputs
+- Validación backend
+- Prepared statements
+- Middleware de acceso
+- Protección de rutas
+
+# CÓDIGO
+
+Quiero:
+
+- Código limpio
+- Separación correcta MVC
+- Controladores organizados
+- Modelos reutilizables
+- Layouts reutilizables
+- Comentarios importantes
+- Buenas prácticas
+- Estructura escalable
+
+# GENERAR
+
+Necesito que generes:
+
+1. Estructura completa del proyecto
+2. Archivos base MVC
+3. Router principal
+4. Conexión PDO
+5. Layouts reutilizables
+6. Login funcional
+7. Middleware de roles
+8. CRUD base de libros
+9. CRUD base de usuarios
+10. Base de datos SQL
+11. Sidebar responsive
+12. Dashboard inicial
+13. Configuración inicial Bootstrap
+14. Scripts JS iniciales
+15. Sistema de sesiones
+16. Plantilla moderna profesional
